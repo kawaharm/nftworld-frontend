@@ -8,7 +8,7 @@ import {
 
 // Components
 import NftContainer from "./components/NftContainer";
-// import CharacterContainer from "./components/CharacterContainer";
+import Homepage from "./components/Homepage";
 // import About from "./components/About";
 // import Contact from "./components/Contact";
 // import VoteContainer from "./components/VoteContainer";
@@ -19,12 +19,12 @@ class App extends Component {
     return (
       <Router>
         <Routes>
-          <Route exact path="/" element={<NftContainer />} />
-          {/* <Route path="/characters" element={<CharacterContainer />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/vote" element={<VoteContainer />} />
-          <Route path="/seasons" element={<SeasonContainer />} /> */}
+          <Route exact path="/" element={<Homepage />} />
+          <Route path="/nft" element={<NftContainer />} />
+          {/* <Route path="/about" element={<About />} /> */}
+          {/* <Route path="/contact" element={<Contact />} /> */}
+          {/* <Route path="/vote" element={<VoteContainer />} /> */}
+          {/* <Route path="/seasons" element={<SeasonContainer />} /> */}
         </Routes>
       </Router>
     );

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import './NftContainer.css';
 
 // Component
 
@@ -46,330 +47,256 @@ class NftContainer extends Component {
     render() {
         return (
             <div>
-                <nav class="navbar is-dark">
-                    <div class="navbar-brand">
-                        <a class="navbar-item" href="https://bulma.io">
-                            <img src="https://bulma.io/images/bulma-logo.png" alt="Bulma: a modern CSS framework based on Flexbox" width="112" height="28" />
-                        </a>
-                        <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
-                    </div>
+                <nav class="navbar" role="navigation" aria-label="main navigation">
+                    <div class="container">
+                        <div class="navbar-brand">
+                            <a class="navbar-item" href="https://bulma.io">
+                                <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28" />
+                            </a>
 
 
-                    <div id="navbarExampleTransparentExample" class="navbar-menu">
-                        <div class="navbar-start">
-                            <a class="navbar-item" href="https://bulma.io/">
-                                Home
+                            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                                <span aria-hidden="true"></span>
+                                <span aria-hidden="true"></span>
+                                <span aria-hidden="true"></span>
                             </a>
-                            <a class="navbar-item" href="https://bulma.io/">
-                                Band
-                            </a>
-                            <a class="navbar-item" href="https://bulma.io/">
-                                Tour
-                            </a>
-                            <a class="navbar-item" href="https://bulma.io/">
-                                Contact
-                            </a>
-                            <div class="navbar-item has-dropdown is-hoverable">
-                                <a class="navbar-link" href="/documentation/overview/start/">
-                                    More
-                                </a>
-                                <div class="navbar-dropdown is-boxed">
-                                    <a class="navbar-item" href="/documentation/overview/start/">
-                                        Mechandise
-                                    </a>
-                                    <a class="navbar-item" href="https://bulma.io/documentation/modifiers/syntax/">
-                                        Extras
-                                    </a>
-                                    <a class="navbar-item" href="https://bulma.io/documentation/columns/basics/">
-                                        Media
-                                    </a>
-                                </div>
-                            </div>
                         </div>
 
 
-                        <div class="navbar-end">
-                            <div class="navbar-item">
-                                <div class="field">
-                                    <div class="control">
-                                        <input class="input" type="text" placeholder="Search . . ." />
-                                    </div>
-                                </div>
+                        <div id="navbarBasicExample" class="navbar-menu">
+                            <div class="navbar-end">
+                                <a class="navbar-item"> Tag </a>
+                                <a class="navbar-item"> Author </a>
+                                <a class="navbar-item"> Style Guide </a>
                             </div>
                         </div>
                     </div>
                 </nav>
-
-
-                <section class="hero">
-                    <figure class="image">
-                        <img src="https://images.pexels.com/photos/167636/pexels-photo-167636.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" />
-                    </figure>
-                </section>
-
-
-                <section class="section">
-                    <div class="container has-text-centered">
-                        <h2 class="title">The Band</h2>
-                        <p>We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                            aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-                            laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-
-
-                        <div class="columns is-centered" style="padding: 2rem">
-                            <div class="column">
-                                <div class="card">
-                                    <div class="card-image">
-                                        <figure class="image is-2by1">
-                                            <img src="https://images.pexels.com/photos/167635/pexels-photo-167635.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Placeholder image" />
-                                        </figure>
-                                    </div>
-                                    <div class="card-content">
-                                        <div class="media">
-                                            <div class="media-content">
-                                                <p class="title is-4">John Smith</p>
-                                                <p class="subtitle is-6">@johnsmith</p>
-                                            </div>
-                                        </div>
-
-
-                                        <div class="content">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.
-                                            <a>@bulmaio</a>.
-                                            <a href="#">#css</a>
-                                            <a href="#">#responsive</a>
-                                        </div>
-                                    </div>
-                                </div>
+                <section class="hero is-medium">
+                    <div class="hero-body has-text-centered">
+                        <h1 class="title is-2">Thoughts, stories, and ideas.</h1>
+                        <div id="hero-input-group" class="field has-addons has-addons-centered">
+                            <div class="control">
+                                <input class="input is-medium" type="text" placeholder="Search..." />
                             </div>
-                            <div class="column">
-                                <div class="card">
-                                    <div class="card-image">
-                                        <figure class="image is-2by1">
-                                            <img src="https://images.pexels.com/photos/167635/pexels-photo-167635.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Placeholder image" />
-                                        </figure>
-                                    </div>
-                                    <div class="card-content">
-                                        <div class="media">
-                                            <div class="media-content">
-                                                <p class="title is-4">John Smith</p>
-                                                <p class="subtitle is-6">@johnsmith</p>
-                                            </div>
-                                        </div>
-
-
-                                        <div class="content">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.
-                                            <a>@bulmaio</a>.
-                                            <a href="#">#css</a>
-                                            <a href="#">#responsive</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="column">
-                                <div class="card">
-                                    <div class="card-image">
-                                        <figure class="image is-2by1">
-                                            <img src="https://images.pexels.com/photos/167635/pexels-photo-167635.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Placeholder image" />
-                                        </figure>
-                                    </div>
-                                    <div class="card-content">
-                                        <div class="media">
-                                            <div class="media-content">
-                                                <p class="title is-4">John Smith</p>
-                                                <p class="subtitle is-6">@johnsmith</p>
-                                            </div>
-                                        </div>
-
-
-                                        <div class="content">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.
-                                            <a>@bulmaio</a>.
-                                            <a href="#">#css</a>
-                                            <a href="#">#responsive</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section >
-
-
-                <section class="section">
-                    <div class="container has-text-centered">
-                        <h2 class="title">Tour Dates</h2>
-
-
-                        <div class="tile is-ancestor">
-                            <div class="tile is-parent">
-                                <article class="tile is-child box">
-                                    <figure class="image">
-                                        <img src="https://images.pexels.com/photos/374710/pexels-photo-374710.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" />
-                                    </figure>
-                                    <p class="title">New York</p>
-                                    <p class="subtitle">Fri 27 Nov 2016</p>
-                                    <a class="button">Buy Tickets</a>
-                                </article>
-                            </div>
-                            <div class="tile is-parent">
-                                <article class="tile is-child box">
-                                    <figure class="image">
-                                        <img src="https://images.pexels.com/photos/374710/pexels-photo-374710.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" />
-                                    </figure>
-                                    <p class="title">New York</p>
-                                    <p class="subtitle">Fri 27 Nov 2016</p>
-                                    <a class="button">Buy Tickets</a>
-                                </article>
-                            </div>
-                            <div class="tile is-parent">
-                                <article class="tile is-child box">
-                                    <figure class="image">
-                                        <img src="https://images.pexels.com/photos/374710/pexels-photo-374710.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" />
-                                    </figure>
-                                    <p class="title">New York</p>
-                                    <p class="subtitle">Fri 27 Nov 2016</p>
-                                    <a class="button">Buy Tickets</a>
-                                </article>
-                            </div>
-                            <div class="tile is-parent">
-                                <article class="tile is-child box">
-                                    <figure class="image">
-                                        <img src="https://images.pexels.com/photos/374710/pexels-photo-374710.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" />
-                                    </figure>
-                                    <p class="title">New York</p>
-                                    <p class="subtitle">Fri 27 Nov 2016</p>
-                                    <a class="button">Buy Tickets</a>
-                                </article>
-                            </div>
-                            <div class="tile is-parent">
-                                <article class="tile is-child box">
-                                    <figure class="image">
-                                        <img src="https://images.pexels.com/photos/374710/pexels-photo-374710.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" />
-                                    </figure>
-                                    <p class="title">New York</p>
-                                    <p class="subtitle">Fri 27 Nov 2016</p>
-                                    <a class="button">Buy Tickets</a>
-                                </article>
-                            </div>
-                        </div>
-
-
-                        <div class="tile is-ancestor">
-                            <div class="tile is-parent">
-                                <article class="tile is-child box">
-                                    <figure class="image">
-                                        <img src="https://images.pexels.com/photos/374710/pexels-photo-374710.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" />
-                                    </figure>
-                                    <p class="title">New York</p>
-                                    <p class="subtitle">Fri 27 Nov 2016</p>
-                                    <a class="button">Buy Tickets</a>
-                                </article>
-                            </div>
-                            <div class="tile is-parent">
-                                <article class="tile is-child box">
-                                    <figure class="image">
-                                        <img src="https://images.pexels.com/photos/374710/pexels-photo-374710.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" />
-                                    </figure>
-                                    <p class="title">New York</p>
-                                    <p class="subtitle">Fri 27 Nov 2016</p>
-                                    <a class="button">Buy Tickets</a>
-                                </article>
-                            </div>
-                            <div class="tile is-parent">
-                                <article class="tile is-child box">
-                                    <figure class="image">
-                                        <img src="https://images.pexels.com/photos/374710/pexels-photo-374710.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" />
-                                    </figure>
-                                    <p class="title">New York</p>
-                                    <p class="subtitle">Fri 27 Nov 2016</p>
-                                    <a class="button">Buy Tickets</a>
-                                </article>
-                            </div>
-                            <div class="tile is-parent">
-                                <article class="tile is-child box">
-                                    <figure class="image">
-                                        <img src="https://images.pexels.com/photos/374710/pexels-photo-374710.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" />
-                                    </figure>
-                                    <p class="title">New York</p>
-                                    <p class="subtitle">Fri 27 Nov 2016</p>
-                                    <a class="button">Buy Tickets</a>
-                                </article>
-                            </div>
-                            <div class="tile is-parent">
-                                <article class="tile is-child box">
-                                    <figure class="image">
-                                        <img src="https://images.pexels.com/photos/374710/pexels-photo-374710.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" />
-                                    </figure>
-                                    <p class="title">New York</p>
-                                    <p class="subtitle">Fri 27 Nov 2016</p>
-                                    <a class="button">Buy Tickets</a>
-                                </article>
+                            <div class="control">
+                                <a class="button is-medium is-primary">
+                                    <i class="fal fa-search"></i>
+                                </a>
                             </div>
                         </div>
                     </div>
                 </section>
-
-
-                <section class="section">
-                    <div class="container has-text-centered">
-                        <h2 class="title">Contact</h2>
-
-
-                        <form>
-                            <div class="field is-horizontal">
-                                <div class="field-body">
-                                    <div class="field">
-                                        <p class="control has-icons-left">
-                                            <input class="input" type="text" placeholder="Name" />
-                                            <span class="icon is-small is-left">
-                                                <i class="fas fa-user"></i>
-                                            </span>
-                                        </p>
-                                    </div>
-                                    <div class="field">
-                                        <p class="control has-icons-left has-icons-right">
-                                            <input class="input" type="email" placeholder="Email" />
-                                            <span class="icon is-small is-left">
-                                                <i class="fas fa-envelope"></i>
-                                            </span>
-                                        </p>
-                                    </div>
+                <div class="container is-max-desktop">
+                    <section class="featured">
+                        <div class="level">
+                            <div class="level-left">
+                                <div class="level-item">
+                                    <h2 class="subtitle">Featured Articles</h2>
                                 </div>
                             </div>
-
-
-                            <div class="field is-horizontal">
-                                <div class="field-body">
-                                    <div class="field">
+                            <div class="level-right">
+                                <div class="level-item">
+                                    <div class="field has-addons has-addons-centered">
                                         <div class="control">
-                                            <textarea class="textarea" placeholder="Message us"></textarea>
+                                            <a class="button is-small" disabled>
+                                                <i class="far fa-chevron-left"></i>
+                                            </a>
                                         </div>
-                                    </div>
-                                </div>
-                            </div>
-
-
-                            <div class="field is-horizontal">
-                                <div class="field-body">
-                                    <div class="field">
                                         <div class="control">
-                                            <button class="button is-primary">
-                                                Send message
-                                            </button>
+                                            <a class="button is-small">
+                                                <i class="far fa-chevron-right"></i>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </form>
+                        </div>
+                        <div class="columns">
+                            <div class="column is-3">
+                                <article>
+                                    <figure class="image is-5by3">
+                                        <img src="https://i.ibb.co/fq8hSGQ/placeholder-image-368x246.png" />
+                                    </figure>
+                                    <h2 class="subtitle">Creating a Group</h2>
+                                    <span class="tag is-rounded">Users & Groups</span>
+                                </article>
+                            </div>
+                            <div class="column is-3">
+                                <article>
+                                    <figure class="image is-5by3">
+                                        <img src="https://i.ibb.co/fq8hSGQ/placeholder-image-368x246.png" />
+                                    </figure>
+                                    <h2 class="subtitle">Downloading/Printing Your Invoices</h2>
+                                    <span class="tag is-rounded">Billing & Accounts</span>
+                                </article>
+                            </div>
+                            <div class="column is-3">
+                                <article>
+                                    <figure class="image is-5by3">
+                                        <img src="https://i.ibb.co/fq8hSGQ/placeholder-image-368x246.png" />
+                                    </figure>
+                                    <h2 class="subtitle">Changing the Account Owner</h2>
+                                    <span class="tag is-rounded">Billing & Accounts</span>
+                                </article>
+                            </div>
+                            <div class="column is-3">
+                                <article>
+                                    <figure class="image is-5by3">
+                                        <img src="https://i.ibb.co/fq8hSGQ/placeholder-image-368x246.png" />
+                                    </figure>
+                                    <h2 class="subtitle">Adding Internal Notes</h2>
+                                    <span class="tag is-rounded">Billing & Accounts</span>
+                                </article>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="categories">
+                        <div class="columns is-multiline">
+                            <div class="column is-6">
+                                <div class="category">
+                                    <h1 class="title is-5">
+                                        Billing & Accounts <span>5 articles</span>
+                                    </h1>
+                                    <hr />
+                                    <ul>
+                                        <li>
+                                            <i class="fas fa-caret-right fa-xs icon-padding-right" />
+                                            General Billing Overview
+                                        </li>
+                                        <li>
+                                            <i class="fas fa-caret-right fa-xs icon-padding-right" />
+                                            Changing the Account Owner
+                                        </li>
+                                        <li>
+                                            <i class="fas fa-caret-right fa-xs icon-padding-right" />
+                                            Downloading/Printing Your Invoices
+                                        </li>
+                                        <li>
+                                            <i class="fas fa-caret-right fa-xs icon-padding-right" />
+                                            Downloading/Printing Your Invoices
+                                        </li>
+                                        <li>
+                                            <i class="fas fa-caret-right fa-xs icon-padding-right" />
+                                            What to Do When Your Card is Declined
+                                        </li>
+                                    </ul>
+                                    <h3 class="category-more">View All <i class="far fa-arrow-right icon-padding-left" /></h3>
+                                </div>
+                            </div>
+                            <div class="column is-6">
+                                <div class="category">
+                                    <h1 class="title is-5">
+                                        FAQs <span>7 articles</span>
+                                    </h1>
+                                    <hr />
+                                    <ul>
+                                        <li>
+                                            <i class="fas fa-caret-right fa-xs icon-padding-right" />
+                                            Why Isn't My Custom Profile Data Showing on My Tickets?
+                                        </li>
+                                        <li>
+                                            <i class="fas fa-caret-right fa-xs icon-padding-right" />
+                                            Why Won't My Gmail SMTP Settings Work?
+                                        </li>
+                                        <li>
+                                            <i class="fas fa-caret-right fa-xs icon-padding-right" />
+                                            Is There a Customer Portal My Users Can Log in To?
+                                        </li>
+                                        <li>
+                                            <i class="fas fa-caret-right fa-xs icon-padding-right" />
+                                            How Do I Export My Contacts, Tickets, Reports?
+                                        </li>
+                                        <li>
+                                            <i class="fas fa-caret-right fa-xs icon-padding-right" />
+                                            How Do I Search for a Number?
+                                        </li>
+                                    </ul>
+                                    <h3 class="category-more">View All <i class="far fa-arrow-right icon-padding-left"></i></h3>
+                                </div>
+                            </div >
+                            <div class="column is-6">
+                                <div class="category">
+                                    <h1 class="title is-5">
+                                        Getting Started <span>6 articles</span>
+                                    </h1>
+                                    <hr />
+                                    <ul>
+                                        <li>
+                                            <i class="fas fa-caret-right fa-xs icon-padding-right" />
+                                            Creating a New Conversation
+                                        </li>
+                                        <li>
+                                            <i class="fas fa-caret-right fa-xs icon-padding-right" />
+                                            Assigning Conversations and Changing Status
+                                        </li>
+                                        <li>
+                                            <i class="fas fa-caret-right fa-xs icon-padding-right" />
+                                            Adding Internal Notes
+                                        </li>
+                                        <li>
+                                            <i class="fas fa-caret-right fa-xs icon-padding-right" />
+                                            Configuring Your Inbox View
+                                        </li >
+                                        <li>
+                                            <i class="fas fa-caret-right fa-xs icon-padding-right" />
+                                            Snoozing a Conversation
+                                        </li >
+                                    </ul >
+                                    <h3 class="category-more">View All <i class="far fa-arrow-right icon-padding-left" /></h3>
+                                </div >
+                            </div >
+                            <div class="column is-6">
+                                <div class="category">
+                                    <h1 class="title is-5">
+                                        Users & Groups <span>3 articles</span>
+                                    </h1>
+                                    <hr />
+                                    <ul>
+                                        <li>
+                                            <i class="fas fa-caret-right fa-xs icon-padding-right" />
+                                            Understanding User Roles
+                                        </li>
+                                        <li>
+                                            <i class="fas fa-caret-right fa-xs icon-padding-right" />
+                                            Creating a Group
+                                        </li>
+                                        <li>
+                                            <i class="fas fa-caret-right fa-xs icon-padding-right" />
+                                            Editing the Role of a User
+                                        </li>
+                                    </ul >
+                                    <h3 class="category-more">View All <i class="far fa-arrow-right icon-padding-left" /></h3>
+                                </div >
+                            </div >
+                        </div >
+                    </section >
+                </div >
+                <footer class="footer">
+                    <div class="container">
+                        <div class="content has-text-centered">
+                            <div class="links">
+
+
+                                <div class="level-item">
+                                    <a href="#">Link One</a>
+                                </div>
+                                <div class="level-item">
+                                    <a href="#">Link One</a>
+                                </div>
+                                <div class="level-item">
+                                    <a href="#">Link One</a>
+                                </div>
+                            </div>
+                            <p>
+                                <a href="https://bulma.io">
+                                    <img src="https://bulma.io/images/made-with-bulma.png" alt="Made with Bulma" width="128" height="24" />
+                                </a>
+                            </p>
+                        </div>
                     </div>
-                </section>
-            </div >
+                </footer>
+            </div>
         )
     }
 }
