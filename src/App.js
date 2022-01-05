@@ -9,10 +9,8 @@ import {
 // Components
 import NftContainer from "./components/NftContainer";
 import Homepage from "./components/Homepage";
-// import About from "./components/About";
-// import Contact from "./components/Contact";
-// import VoteContainer from "./components/VoteContainer";
-// import SeasonContainer from "./components/SeasonContainer";
+import NftPage from "./components/NftPage";
+import CryptoContainer from "./components/CryptoContainer";
 
 class App extends Component {
   render() {
@@ -21,10 +19,11 @@ class App extends Component {
         <Routes>
           <Route exact path="/" element={<Homepage />} />
           <Route path="/nft" element={<NftContainer />} />
-          {/* <Route path="/about" element={<About />} /> */}
-          {/* <Route path="/contact" element={<Contact />} /> */}
-          {/* <Route path="/vote" element={<VoteContainer />} /> */}
-          {/* <Route path="/seasons" element={<SeasonContainer />} /> */}
+          <Route path="/nft/cryptopunks" element={<NftPage collection={"cryptopunks"} />} />
+          <Route path="/nft/boredapeyachtclub" element={<NftPage collection={"boredapeyachtclub"} />} />
+          <Route path="/nft/mutant-ape-yacht-club" element={<NftPage collection={"mutant-ape-yacht-club"} />} />
+          <Route path="/nft/collectvoxmirandus" element={<NftPage collection={"collectvoxmirandus"} />} />
+          <Route path="/cryptopunks" element={<CryptoContainer />} />
         </Routes>
       </Router>
     );
